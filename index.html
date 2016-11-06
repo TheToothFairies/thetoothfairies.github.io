@@ -1,1 +1,283 @@
-First commit
+<!DOCTYPE html>
+<html>
+
+<head>
+	
+	<title>The Tooth Fairies - Home</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet">
+	<meta name="viewport" content="width=device-width">
+	
+	<style>
+	
+		*
+		{
+			margin: 0;
+			padding: 0;
+			font-family: 'Archivo Narrow', sans-serif;
+			text-shadow: 0vw 0.1vw 0.18vw rgba(0, 0, 0, 0.5);
+		}
+		
+		::selection
+		{
+			background: #F6527E;
+		}
+		
+		::-moz-selection
+		{
+			background: #F6527E;
+		}
+		
+		.table_css
+		{
+			display: table;
+		}
+		
+		.td_css
+		{
+			display: table-cell;
+			vertical-align: top;
+		}
+		
+		.tr_css
+		{
+			display: flex;
+		}
+		
+		@-ms-viewport
+		{
+			width: device-width;
+		}
+		
+		.header
+		{
+			color: #FFFFFF;
+			background-color: #F6527E;
+			width: 76%;
+			height: 1.2em;
+			padding: 1.3vw;
+			font-size: 1.6vw;
+			
+			-webkit-border-bottom-right-radius: 0.5em;
+			-webkit-border-bottom-left-radius: 0.5em;
+			-moz-border-radius-bottomright: 0.5em;
+			-moz-border-radius-bottomleft: 0.5em;
+			border-bottom-right-radius: 0.5em;
+			border-bottom-left-radius: 0.5em;
+			
+			-ms-user-select: none;
+            user-select: none;
+		}
+		
+		/* Header text */
+		.header_title, .header_link, .header_static
+		{
+			letter-spacing: 0.03em;
+			float: left;
+			color: #FFFFFF;
+			padding-left: 0.1em;
+			padding-right: 0.1em;
+			cursor: default;
+		}
+		
+		.header_title
+		{
+			font-style: italic;
+		}
+		
+		.header_title:hover, .header_link:hover
+		{
+			color: #F6527E;
+			background-color: #FFFFFF;
+			cursor: pointer;
+			text-shadow: 0vw 0vw 0vw rgba(0, 0, 0, 0);
+		}
+		
+		.header_title:active, .header_link:active
+		{
+			color: #DC4971;
+		}
+		
+		.video_player
+		{
+			width: 76%;
+			border-radius: 1vw;
+			-moz-border-radius: 1vw;
+			-webkit-border-radius: 1vw;
+			padding: 1.3vw;
+			background-color: #E4E4E1;
+		}
+		
+		.vp_left, .vp_right
+		{
+			width: 25.5vw;
+			height: 5vw;
+			background-color: #FFFFFF;
+			font-size: 1.2vw;
+			
+			-ms-user-select: none;
+            user-select: none;
+		}
+		
+		.vp_left:hover, .vp_right:hover
+		{
+			color: #FFFFFF;
+			background-color: #222222;
+			cursor: pointer;
+		}
+		
+		.vp_left:active, .vp_right:active
+		{
+			color: #FFFFFF;
+			background-color: #444444;
+			cursor: pointer;
+		}
+		
+		.vp_left
+		{
+			border-bottom-left-radius: 1vw;
+		}
+		
+		.vp_right
+		{
+			border-bottom-right-radius: 1vw;
+			width: 25.4vw;
+		}
+		
+		h1
+		{
+			letter-spacing: 0.03em;
+			float: left;
+			color: #FFFFFF;
+			margin-left: 1vw;
+			margin-bottom: 0vw;
+			font-size: 1.6vw;
+			font-weight: bold;
+		}
+		
+		.vp_body
+		{
+			float: left;
+			font-size: 1.2vw;
+			text-shadow: 0vw 0vw 0vw rgba(0, 0, 0, 0);
+			margin: 1vw;
+			margin-top: 0.5vw;
+		}
+		
+		iframe
+		{
+			width: 51vw;
+			height: 29vw;
+			background-color: #000000;
+		}
+		
+		img
+		{
+			width: 35.3vw;
+			height: 20vw;
+			padding: 0.5vw;
+			padding-top: 0vw;
+			padding-bottom: 0vw;
+			-ms-user-select: none;
+            user-select: none;
+		}
+		
+		.br_invs
+		{
+			padding-top: 2vw;
+		}
+		
+		.br_vs
+		{
+			padding-top: 0.05vw;
+			background-color: #000000;
+			margin: 5vw;
+			width: 51vw;
+		}
+		
+		.br_invs_10
+		{
+			padding-top: 20vw;
+		}
+		
+		@media only screen and (max-device-width: 800px)
+		{
+		
+			.header
+			{
+				font-size: 0.8em;
+				width: initial;
+				border-radius: 0px;
+				-moz-border-radius: 0px;
+				-webkit-border-radius: 0px;
+			}
+		
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+	
+	<div align="center">
+	
+		<div class="header">
+		
+				<p class="header_title">#toothfairies</p>
+				
+				<div style="float: right;">
+					<p class="header_link">Episodes</p>
+						<p class="header_static">&nbsp/&nbsp</p>
+					<p class="header_link">About</p>
+						<p class="header_static">&nbsp/&nbsp</p>
+					<p class="header_link">Gallery</p>
+						<p class="header_static">&nbsp/&nbsp</p>
+					<p class="header_link">Contact</p>
+				</div>
+			
+		</div> <!-- <div class="header"> -->
+		
+		<div class="br_invs"></div>
+		
+		<div class="video_player">
+			
+			<div class="table_css">
+			
+				<div class="td_css">
+				
+					<div class="tr_css"><iframe src="https://www.youtube.com/embed/QMeX_muXchk" frameborder="0" allowfullscreen></iframe></div>
+					
+					<div class="tr_css">
+						<div class="td_css"><div class="vp_left"><div style="width: 30%; padding-top: 1vw;"><p>previous episode<p><p>&lt;</p></div></div></div>
+						<div style="width: 0.1vw; background-color: black;"></div>
+						<div class="td_css"><div class="vp_right"><div style="width: 30%; padding-top: 1vw;"><p>next episode<p><p>&gt;</p></div></div></div>
+					</div>
+				
+				</div>
+			
+				<div class="td_css">
+					<h1>The Tooth Fairies: Episode 1</h1>
+					<p class="vp_body" align="left">This is an episode description. Though and highly the enough county for man. Of it up he still court alone widow seems. Suspected he remainder rapturous my sweetness. All vanity regard sudden nor simple can. World and vexed china since after often. Ecstatic advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages so impression. Almost unable put piqued talked likely houses her met. Met any nor may through resolve entered. A cause tried oh do shade happy.</p>
+				</div>
+			
+			</div>
+			
+		</div>
+		
+		<div class="br_vs"></div>
+		
+		<div class="table_css">
+			<div class="td_css"><img src="pic_01.png"></img></div>
+			<div class="td_css"><img src="pic_02.png"></img></div>
+		</div>
+		
+		<div class="br_vs"></div>
+		
+		<div class="br_invs_10"></div>
+		
+	</div> <!-- <div align="center"> -->
+	
+</body>
+
+</html>
