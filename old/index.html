@@ -14,23 +14,18 @@
 		{
 			margin: 0;
 			padding: 0;
-			font-family: 'Georgia', serif;
-		}
-		
-		
-		body
-		{
-			background-color: #E4E4E1;
+			font-family: 'Archivo Narrow', sans-serif;
+			text-shadow: 0vw 0.1vw 0.18vw rgba(0, 0, 0, 0.5);
 		}
 		
 		::selection
 		{
-			background: #F4DBF6;
+			background: #F6527E;
 		}
 		
 		::-moz-selection
 		{
-			background: #F4DBF6;
+			background: #F6527E;
 		}
 		
 		.table_css
@@ -59,74 +54,29 @@
 			width: device-width;
 		}
 		
-		h1, .header_text
-		{
-			float: left;
-			color: #000000;
-			margin-left: 1vw;
-			margin-bottom: 0vw;
-			font-size: 1.4vw;
-			font-weight: bold;
-		}
-		
-		.header_text
-		{
-			color: #FFFFFF;
-		}
-		
 		.header
 		{
 			color: #FFFFFF;
-			
-			background: #F6527E;
-			background: -webkit-linear-gradient(#F6527E, #B63D5D);
-			background: -o-linear-gradient(#F6527E, #B63D5D);
-			background: -moz-linear-gradient(#F6527E, #B63D5D);
-			background: linear-gradient(#F6527E, #B63D5D);
-			
+			background-color: #F6527E;
 			width: 76%;
-			height: 2.6em;
+			height: 1.2em;
 			padding: 1.3vw;
 			font-size: 1.6vw;
-			margin-top: 0.5vw;
 			
-			-ms-user-select: none;
-            user-select: none;
-		}
-		
-		.header2
-		{
-			color: #FFFFFF;
-			background: #B63D5D;
-			width: 76%;
-			padding: 1.3vw;
-			padding-top: 0vw;
+			-webkit-border-bottom-right-radius: 0.5em;
+			-webkit-border-bottom-left-radius: 0.5em;
+			-moz-border-radius-bottomright: 0.5em;
+			-moz-border-radius-bottomleft: 0.5em;
+			border-bottom-right-radius: 0.5em;
+			border-bottom-left-radius: 0.5em;
 			
-			-ms-user-select: none;
-            user-select: none;
-		}
-		
-		.header_empty
-		{
-			width: 11vw;
-		}
-		
-		.header_img
-		{
-			width: 29vw;
-			height: 16vw;
-			padding: 0.5vw;
-			padding-top: 0vw;
-			padding-bottom: 0vw;
-			padding-right: 1vw;
 			-ms-user-select: none;
             user-select: none;
 		}
 		
 		/* Header text */
-		.header_title, .header_home, .header_link, .header_static
+		.header_title, .header_link, .header_static
 		{
-			font-family: 'Archivo Narrow', sans-serif;
 			letter-spacing: 0.03em;
 			float: left;
 			color: #FFFFFF;
@@ -137,23 +87,18 @@
 		
 		.header_title
 		{
-			float: none;
-			padding-bottom: 0.3vw;
-		}
-		
-		.header_home
-		{
 			font-style: italic;
 		}
 		
-		.header_home:hover, .header_link:hover
+		.header_title:hover, .header_link:hover
 		{
 			color: #F6527E;
 			background-color: #FFFFFF;
 			cursor: pointer;
+			text-shadow: 0vw 0vw 0vw rgba(0, 0, 0, 0);
 		}
 		
-		.header_home:active, .header_link:active
+		.header_title:active, .header_link:active
 		{
 			color: #DC4971;
 		}
@@ -161,23 +106,18 @@
 		.video_player
 		{
 			width: 76%;
+			border-radius: 1vw;
+			-moz-border-radius: 1vw;
+			-webkit-border-radius: 1vw;
 			padding: 1.3vw;
-			background-color: #FFFFFF;
+			background-color: #E4E4E1;
 		}
 		
 		.vp_left, .vp_right
 		{
-			color: #000000;
 			width: 25.5vw;
 			height: 5vw;
-			
-			background: #CACACA;
-			background: -webkit-linear-gradient(#D4D4D1, #CACACA);
-			background: -o-linear-gradient(#D4D4D1, #CACACA);
-			background: -moz-linear-gradient(#D4D4D1, #CACACA);
-			background: linear-gradient(#D4D4D1, #CACACA);
-			
-			letter-spacing: 0.02em;
+			background-color: #FFFFFF;
 			font-size: 1.2vw;
 			
 			-ms-user-select: none;
@@ -186,41 +126,45 @@
 		
 		.vp_left:hover, .vp_right:hover
 		{
-			background: #D4D4D1;
-			background: -webkit-linear-gradient(#E4E4E1, #D4D4D1);
-			background: -o-linear-gradient(#E4E4E1, #D4D4D1);
-			background: -moz-linear-gradient(#E4E4E1, #D4D4D1);
-			background: linear-gradient(#E4E4E1, #D4D4D1);
-			
+			color: #FFFFFF;
+			background-color: #222222;
 			cursor: pointer;
 		}
 		
 		.vp_left:active, .vp_right:active
 		{
-			background: #E4E4E1;
-			background: -webkit-linear-gradient(#F4F4F1, #E4E4E1);
-			background: -o-linear-gradient(#F4F4F1, #E4E4E1);
-			background: -moz-linear-gradient(#F4F4F1, #E4E4E1);
-			background: linear-gradient(#F4F4F1, #E4E4E1);
-			
+			color: #FFFFFF;
+			background-color: #444444;
 			cursor: pointer;
 		}
 		
 		.vp_left
 		{
-			border-bottom-left-radius: 0.4vw;
+			border-bottom-left-radius: 1vw;
 		}
 		
 		.vp_right
 		{
-			border-bottom-right-radius: 0.4vw;
+			border-bottom-right-radius: 1vw;
 			width: 25.4vw;
+		}
+		
+		h1
+		{
+			float: left;
+			color: #000000;
+			margin-left: 1vw;
+			margin-bottom: 0vw;
+			font-size: 1.6vw;
+			font-weight: bold;
+			text-shadow: 0vw 0vw 0vw rgba(0, 0, 0, 0);
 		}
 		
 		.vp_body
 		{
 			float: left;
 			font-size: 1.2vw;
+			text-shadow: 0vw 0vw 0vw rgba(0, 0, 0, 0);
 			margin: 1vw;
 			margin-top: 0.5vw;
 		}
@@ -245,14 +189,14 @@
 		
 		.br_invs
 		{
-			padding-top: 1vw;
+			padding-top: 2vw;
 		}
 		
 		.br_vs
 		{
-			padding-top: 1px;
+			padding-top: 0.05vw;
 			background-color: #000000;
-			margin: 4vw;
+			margin: 5vw;
 			width: 78.5%;
 		}
 		
@@ -267,14 +211,10 @@
 			.header
 			{
 				font-size: 10vw;
-				height: 12vw;
 				width: initial;
-				margin: 0vw;
-			}
-			
-			.header_home
-			{
-				float: none;
+				border-radius: 0vw;
+				-moz-border-radius: 0vw;
+				-webkit-border-radius: 0vw;
 			}
 			
 			.header_title
@@ -282,11 +222,10 @@
 				float: none;
 			}
 			
-			.header_desktop, .header_title
+			.header_desktop
 			{
 				font-size: 0vw;
 				visibility: hidden;
-				float: left;
 			}
 			
 			.br_invs
@@ -318,28 +257,25 @@
 			
 			h1
 			{
-				font-size: 5.8vw;
+				font-size: 6.4vw;
 				margin-left: 5vw;
-				margin-top: 4.2vw;
+				margin-top: 4vw;
 			}
 			
 			.vp_body
 			{
-				font-size: 4.6vw;
+				font-size: 4.8vw;
 				margin: 5vw;
 				margin-top: 3vw;
 			}
 			
-			.vp_left, .vp_right, .vp_left:hover, .vp_right:hover, .vp_left:active, .vp_right:active
+			.vp_left, .vp_right
 			{
 				width: 50vw;
 				height: 14vw;
 				font-size: 5vw;
-				background: #CACACA;
-				background: -webkit-linear-gradient(#D4D4D1, #CACACA);
-				background: -o-linear-gradient(#D4D4D1, #CACACA);
-				background: -moz-linear-gradient(#D4D4D1, #CACACA);
-				background: linear-gradient(#D4D4D1, #CACACA);
+				border-bottom-left-radius: 0vw;
+				border-bottom-right-radius: 0vw;
 			}
 			
 			img
@@ -361,29 +297,19 @@
 	
 		<div class="header">
 		
-				<p class="header_title" align="left">THE TOOTHFAIRIES</p>
-				<p class="header_home">#TOOTHFAIRIES</p>
+				<p class="header_title">#toothfairies</p>
 				
 				<div class="header_desktop" style="float: right;">
-					<p class="header_link">MEDIA</p>
-						<p class="header_static">&nbsp|&nbsp</p>
-					<p class="header_link">ABOUT</p>
-						<p class="header_static">&nbsp|&nbsp</p>
-					<p class="header_link">GALLERY</p>
-						<p class="header_static">&nbsp|&nbsp</p>
-					<p class="header_link">CONTACT US</p>
+					<p class="header_link">Episodes</p>
+						<p class="header_static">&nbsp/&nbsp</p>
+					<p class="header_link">About</p>
+						<p class="header_static">&nbsp/&nbsp</p>
+					<p class="header_link">Gallery</p>
+						<p class="header_static">&nbsp/&nbsp</p>
+					<p class="header_link">Contact</p>
 				</div>
 			
 		</div> <!-- <div class="header"> -->
-		
-		<div class="header2">
-			<div class="table_css">
-				<div class="td_css2"><div class="header_text" align="left">Our Mission:</div>
-						<p class="vp_body" align="left">This is an episode description. Though and highly the enough county for man. Of it up he still court alone widow seems. Suspected he remainder rapturous my sweetness. All vanity regard sudden nor simple can. World and vexed china since after often. Ecstatic advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages so impression.</p></div>
-				<div class="td_css2"><div class="header_empty"></div></div>
-				<div class="td_css2"><img class="header_img" src="pic_02.png"></img></div>
-			</div>
-		</div>
 		
 		<div class="br_invs"></div>
 		
@@ -397,7 +323,7 @@
 					
 					<div class="tr_css">
 						<div class="td_css"><div class="vp_left"><div style="padding-top: 1vw;"><p align="center">previous episode</p><p align="center">&lt;</p></div></div></div>
-						<div style="width: 1px; background-color: black;"></div>
+						<div style="width: 0.1vw; background-color: black;"></div>
 						<div class="td_css"><div class="vp_right"><div style="padding-top: 1vw;"><p align="center">next episode</p><p align="center">&gt;</p></div></div></div>
 					</div>
 				
