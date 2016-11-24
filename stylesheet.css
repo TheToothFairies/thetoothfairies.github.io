@@ -231,7 +231,7 @@ h1, .header_text
 	margin-top: 0.5vw;
 }
 
-iframe
+iframe, object
 {
 	width: 51vw;
 	height: 29vw;
@@ -389,7 +389,7 @@ img.icon:active
 		background-color: #E4E4E1;
 	}
 	
-	iframe
+	iframe, object
 	{
 		width: 100vw;
 		height: 56vw;
