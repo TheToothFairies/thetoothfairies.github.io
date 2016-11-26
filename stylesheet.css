@@ -36,7 +36,7 @@ body
 	vertical-align: top;
 }
 
-.tr_css
+.tr_css, .tr_css2
 {
 	display: flex;
 }
@@ -111,7 +111,7 @@ h1, .header_text
 }
 
 /* Header text */
-.header_title, .header_home, .header_link, .header_static,.header_mobile
+.header_title, .header_home, .header_link, .header_static, .header_mobile
 {
 	font-family: 'Archivo Narrow', sans-serif;
 	letter-spacing: 0.03em;

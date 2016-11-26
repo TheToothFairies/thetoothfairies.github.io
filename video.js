@@ -1,54 +1,7 @@
-var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
-
 /* START VIDEO PLAYER */
 
 var current_episode = 1;
 var episode_max = 6;
-
-$( document ).ready(function()
-{
-	//Remove episode slider if only one episode
-	if (episode_max == 1)
-	{
-		//Close your eyes and tap your delete key three times.
-		$(".tr_css2 div").remove();
-		$(".tr_css2 div").remove();
-		$(".tr_css2 div").remove();
-	}
-	
-	//Load cookie saved position
-	var local_cookie = getCookie("episode")
-	if ((parseInt(local_cookie) > 0) && (parseInt(local_cookie) < episode_max + 1))
-	{
-		current_episode = parseInt(local_cookie);
-		switchEpisode(0);
-	}
-	else
-	{
-		//This cookie is invalid
-		clearCookies();
-	}
-	
-	//Override current episode with link
-	//Example example.com/episode_XX
-	//UNTESTED (should work correctly)
-	var local_url = window.location.hash.substr(1);
-	var num_url = parseInt(local_url.substring(8, 10));
-	if ((num_url > 0) && (num_url < episode_max + 1))
-	{
-		current_episode = num_url;
-		switchEpisode(0);
-	}
-	
-	//Reload on Firefox to alternate YT player
-	var isDesktop = ($(".header_mobile").css("cursor") == "default");
-	if (isFirefox && isDesktop)
-	{
-		switchEpisode(0);
-		$("object").css("width", "0vw");
-		$("object").css("height", "0vw");
-	}
-});
 
 function getEpisodeVideoID(episode)
 {
@@ -60,7 +13,7 @@ function getEpisodeVideoID(episode)
 			return "QMeX_muXchk";
 			
 		case 2:
-			return "RaXowL7SWW8";
+			return "CfYl6_f2Mdg";
 			
 		case 3:
 			return "WF34N4gJAKE";
@@ -154,7 +107,7 @@ function switchEpisode(direction)
 		if (current_episode == 0)
 			current_episode = episode_max;
 	}
-	else if (direction == 1)
+	else
 	{
 		current_episode += 1;
 		if (current_episode == episode_max + 1)
@@ -164,24 +117,10 @@ function switchEpisode(direction)
 	document.getElementById("episode_title").innerHTML = getEpisodeTitle(current_episode);
 	document.getElementById("episode_desc").innerHTML = getEpisodeDesc(current_episode);
 	
-	if (isFirefox)
-	{
-		$(".main_video object").remove();
-		$(".youtube_player iframe").remove();
-		$('<iframe class="youtube_player" frameborder="0" allowfullscreen></iframe>')
-			.attr("src", "https://www.youtube.com/embed/" + getEpisodeVideoID(current_episode) + "?rel=0&amp;showinfo=0")
-			.appendTo(".youtube_player");
-	}
-	else
-	{
-		$(".youtube_player embed").remove();
-		$('<embed class="youtube_player" width="100%" height="100%" wmode="window" allowfullscreen="true" type="application/x-shockwave-flash">')
-			.attr("src", "https://www.youtube.com/v/" + getEpisodeVideoID(current_episode) + "?rel=0&amp;showinfo=0&showsearch=0&fs=1&rel=0&autoplay=0&amp;ap=%2526fmt%3D18")
-			.appendTo(".youtube_player");
-	}
-	
-	clearCookies()
-	setCookie("episode", "" + current_episode, 365)
+	$(".youtube_player embed").remove();
+	$('<embed class="youtube_player" width="100%" height="100%" wmode="window" allowfullscreen="true" type="application/x-shockwave-flash">')
+		.attr("src", "https://www.youtube.com/v/" + getEpisodeVideoID(current_episode) + "?rel=0&amp;showinfo=0&showsearch=0&fs=1&rel=0&autoplay=0&amp;ap=%2526fmt%3D18")
+		.appendTo(".youtube_player");
 	
 	//Backup if embed does not work
 	/*
@@ -209,25 +148,16 @@ function getCookie(cname)
 {
 	var name = cname + "=";
 	var ca = document.cookie.split(';');
-	for (var i = 0; i < ca.length; i++)
-	{
+	for (var i = 0; i < ca.length; i++) {
 		var c = ca[i];
-		while (c.charAt(0) == ' ')
-		{
+		while (c.charAt(0) == ' ') {
 			c = c.substring(1);
 		}
-		
-		if (c.indexOf(name) == 0)
-		{
+		if (c.indexOf(name) == 0) {
 			return c.substring(name.length, c.length);
 		}
 	}
 	return "";
-}
-
-function clearCookies()
-{
-	setCookie("episode", "", -1)
 }
 
 /* END COOKIES */
