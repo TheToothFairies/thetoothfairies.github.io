@@ -1,54 +1,11 @@
-var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+var FACEBOOK_LINK = "https://facebook.com/"
+var INSTAGRAM_LINK = "https://instagram.com/"
+var YOUTUBE_MAIN_LINK = "https://youtube.com/"
 
-/* START VIDEO PLAYER */
+var OUR_MISSION = "This is an episode description. Though and highly the enough county for man. Of it up he still court alone widow seems. Suspected he remainder rapturous my sweetness. All vanity regard sudden nor simple can. World and vexed china since after often. Ecstatic advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages so impression."
 
 var current_episode = 1;
 var episode_max = 6;
-
-$( document ).ready(function()
-{
-	//Remove episode slider if only one episode
-	if (episode_max == 1)
-	{
-		//Close your eyes and tap your delete key three times.
-		$(".tr_css2 div").remove();
-		$(".tr_css2 div").remove();
-		$(".tr_css2 div").remove();
-	}
-	
-	//Load cookie saved position
-	var local_cookie = getCookie("episode")
-	if ((parseInt(local_cookie) > 0) && (parseInt(local_cookie) < episode_max + 1))
-	{
-		current_episode = parseInt(local_cookie);
-		switchEpisode(0);
-	}
-	else
-	{
-		//This cookie is invalid
-		clearCookies();
-	}
-	
-	//Override current episode with link
-	//Example example.com/episode_XX
-	//UNTESTED (should work correctly)
-	var local_url = window.location.hash.substr(1);
-	var num_url = parseInt(local_url.substring(8, 10));
-	if ((num_url > 0) && (num_url < episode_max + 1))
-	{
-		current_episode = num_url;
-		switchEpisode(0);
-	}
-	
-	//Reload on Firefox to alternate YT player
-	var isDesktop = ($(".header_mobile").css("cursor") == "default");
-	if (isFirefox && isDesktop)
-	{
-		switchEpisode(0);
-		$("object").css("width", "0vw");
-		$("object").css("height", "0vw");
-	}
-});
 
 function getEpisodeVideoID(episode)
 {
@@ -123,6 +80,62 @@ function getEpisodeDesc(episode)
 			return "This is an episode description. Effects present letters inquiry no an removed or friends. Desire behind latter me though in. Supposing shameless am he engrossed up additions. My possible peculiar together to. Desire so better am cannot he up before points. Remember mistaken opinions it pleasure of debating. Court front maids forty if aware their at. Chicken use are pressed removed.";
 	}
 }
+
+var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+
+function loadPage(page)
+{
+	window.open(page,'_blank');
+}
+
+/* START VIDEO PLAYER */
+
+$( document ).ready(function()
+{
+	$( "#mission" ).append(OUR_MISSION);
+	
+	//Remove episode slider if only one episode
+	if (episode_max == 1)
+	{
+		//Close your eyes and tap your delete key three times.
+		$(".tr_css2 div").remove();
+		$(".tr_css2 div").remove();
+		$(".tr_css2 div").remove();
+	}
+	
+	//Load cookie saved position
+	var local_cookie = getCookie("episode")
+	if ((parseInt(local_cookie) > 0) && (parseInt(local_cookie) < episode_max + 1))
+	{
+		current_episode = parseInt(local_cookie);
+		switchEpisode(0);
+	}
+	else
+	{
+		//This cookie is invalid
+		clearCookies();
+	}
+	
+	//Override current episode with link
+	//Example example.com/episode_XX
+	//UNTESTED (should work correctly)
+	var local_url = window.location.hash.substr(1);
+	var num_url = parseInt(local_url.substring(8, 10));
+	if ((num_url > 0) && (num_url < episode_max + 1))
+	{
+		current_episode = num_url;
+		switchEpisode(0);
+	}
+	
+	//Reload on Firefox to alternate YT player
+	var isDesktop = ($(".header_mobile").css("cursor") == "default");
+	if (isFirefox && isDesktop)
+	{
+		switchEpisode(0);
+		$("object").css("width", "0vw");
+		$("object").css("height", "0vw");
+	}
+});
 
 function mobileToggleMenu()
 {
