@@ -240,8 +240,3 @@ function clearCookies()
 }
 
 /* END COOKIES */
-
-
-/* START GALLERY */
-
-/* END GALLERY */

@@ -276,6 +276,22 @@ img.ig:active
 	filter: alpha(opacity=50);
 }
 
+img.about_desktop
+{
+	width: 30vw;
+	height: 20vw;
+	padding: 0vw;
+	visibility: visible;
+}
+
+img.about_mobile
+{
+	width: 0vw;
+	height: 0vw;
+	padding: 0vw;
+	visibility: hidden;
+}
+
 .br_invs
 {
 	padding-top: 1vw;
@@ -465,6 +481,22 @@ img.icon:active
 	{
 		width: 30vw;
 		height: 30vw;
+	}
+	
+	img.about_desktop
+	{
+		width: 0vw;
+		height: 0vw;
+		padding: 0vw;
+		visibility: hidden;
+	}
+
+	img.about_mobile
+	{
+		width: 90vw;
+		height: 55vw;
+		padding: 0vw;
+		visibility: visible;
 	}
 	
 	#instafeed
