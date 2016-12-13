@@ -260,9 +260,6 @@ img.ig
 	width: 20vw;
 	height: 20vw;
 	padding: 1vw;
-	-webkit-border-radius: 2vw;
-	-moz-border-radius: 2vw;
-	border-radius: 2vw;
 	opacity: 1;
 	filter: alpha(opacity=100);
 }
@@ -462,6 +459,18 @@ img.icon:active
 		width: 90vw;
 		height: 51vw;
 		padding-bottom: 4vw;
+	}
+	
+	img.ig
+	{
+		width: 30vw;
+		height: 30vw;
+	}
+	
+	#instafeed
+	{
+		display: table-cell;
+		padding-top: 3vw;
 	}
 	
 	img.icon
