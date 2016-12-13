@@ -10,9 +10,10 @@ body
 	background-color: #E4E4E1;
 }
 
-a, a,:hover, a:active
+a, a:hover, a:active
 {
 	text-decoration: none;
+	color: #000000;
 }
 
 ::selection

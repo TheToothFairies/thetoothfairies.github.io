@@ -2,10 +2,8 @@ var FACEBOOK_LINK = "https://facebook.com/"
 var INSTAGRAM_LINK = "https://instagram.com/"
 var YOUTUBE_MAIN_LINK = "https://youtube.com/"
 
-var OUR_MISSION = "This is an episode description. Though and highly the enough county for man. Of it up he still court alone widow seems. Suspected he remainder rapturous my sweetness. All vanity regard sudden nor simple can. World and vexed china since after often. Ecstatic advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages so impression."
-
 var current_episode = 1;
-var episode_max = 6;
+var episode_max = 1;
 
 function getEpisodeVideoID(episode)
 {
@@ -14,7 +12,7 @@ function getEpisodeVideoID(episode)
 	switch (episode)
 	{
 		case 1:
-			return "QMeX_muXchk";
+			return "1-fXO-H9oHs";
 			
 		case 2:
 			return "RaXowL7SWW8";
@@ -38,7 +36,7 @@ function getEpisodeTitle(episode)
 	switch (episode)
 	{
 		case 1:
-			return "The Tooth Fairies: Episode 1";
+			return "#ToothFairies Teaser";
 			
 		case 2:
 			return "The Tooth Fairies: Episode 2";
@@ -62,7 +60,7 @@ function getEpisodeDesc(episode)
 	switch (episode)
 	{
 		case 1:
-			return "This is an episode description. Though and highly the enough county for man. Of it up he still court alone widow seems. Suspected he remainder rapturous my sweetness. All vanity regard sudden nor simple can. World and vexed china since after often. Ecstatic advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages so impression. Almost unable put piqued talked likely houses her met. Met any nor may through resolve entered. A cause tried oh do shade happy.";
+			return "";
 			
 		case 2:
 			return "This is an episode description. Full he none no side. Uncommonly surrounded considered for him are its. It we is read good soon. My to considered delightful invitation announcing of no decisively boisterous. Did add dashwoods deficient man concluded additions resources. Or landlord packages overcame distance smallest in recurred. Wrong maids or be asked no on enjoy. Household few sometimes out attending described. Lain just fact four of am meet high.";
@@ -91,9 +89,7 @@ function loadPage(page)
 /* START VIDEO PLAYER */
 
 $( document ).ready(function()
-{
-	$( "#mission" ).append(OUR_MISSION);
-	
+{	
 	//Remove episode slider if only one episode
 	if (episode_max == 1)
 	{
