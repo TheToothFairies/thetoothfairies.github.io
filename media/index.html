@@ -13,6 +13,19 @@
 	<script type="text/javascript" src="https://thetoothfairies.github.io/main.js"></script>
 	<script type="text/javascript" src="https://thetoothfairies.github.io/instafeed.min.js"></script>
 	
+	<script type="text/javascript">
+		var feed = new Instafeed({
+			get: 'user',
+			userId: '290778773',
+			accessToken: '290778773.1677ed0.cb9e9d4e8a1f4f7c84bb5271617578d9',
+			resolution: 'standard_resolution',
+			template: '<a href="{{link}}"><img src="{{image}}" class="ig"/></a>'
+		});
+		feed.run();
+		//userId https://smashballoon.com/instagram-feed/find-instagram-user-id/
+		//accessToken http://instagram.pixelunion.net/
+	</script>
+	
 </head>
 
 <body>
@@ -61,12 +74,10 @@
 				
 					<!-- ADD CONTENT HERE -->
 				
-					<h1 align="left">Media:</h1>
-					<p class="vp_body" align="left">This is a media description. Though and highly the enough county for man. Of it up he still court alone widow seems. Suspected he remainder rapturous my sweetness. All vanity regard sudden nor simple can. World and vexed china since after often. Ecstatic advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages so impression. Almost unable put piqued talked likely houses her met. Met any nor may through resolve entered. A cause tried oh do shade happy.</p>
-				
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/QMeX_muXchk" frameborder="0" allowfullscreen></iframe>
-				
-					<img src="https://thetoothfairies.github.io/pic_01.png"></img>
+					<h1 align="left" style="margin-left: 5.5vw;">Media:</h1>
+					<div class="br_invs"></div>
+					<div class="br_invs"></div>
+					<div id="instafeed"></div>
 					
 					<!-- DO NOT ADD CONTENT HERE -->
 				

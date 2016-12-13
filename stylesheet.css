@@ -255,6 +255,30 @@ img
 	user-select: none;
 }
 
+img.ig
+{
+	width: 20vw;
+	height: 20vw;
+	padding: 1vw;
+	-webkit-border-radius: 2vw;
+	-moz-border-radius: 2vw;
+	border-radius: 2vw;
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+img.ig:hover
+{
+	opacity: 0.75;
+	filter: alpha(opacity=75);
+}
+
+img.ig:active
+{
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+
 .br_invs
 {
 	padding-top: 1vw;
