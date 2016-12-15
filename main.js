@@ -1,5 +1,5 @@
 var FACEBOOK_LINK = "https://facebook.com/"
-var INSTAGRAM_LINK = "https://instagram.com/"
+var INSTAGRAM_LINK = "https://www.instagram.com/hashtagtoothfairies/"
 var YOUTUBE_MAIN_LINK = "https://youtube.com/"
 
 var current_episode = 1;

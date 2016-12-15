@@ -5,6 +5,15 @@
 	font-family: 'Georgia', serif;
 }
 
+@font-face
+{
+	font-family: 'FanfareJF';
+	src: url('FanfareJF.eot');
+	src: url('FanfareJF.eot?#iefix') format('embedded-opentype'),
+		url('FanfareJF.woff') format('woff'),
+		url('FanfareJF.ttf') format('truetype');
+}
+
 body
 {
 	background-color: #E4E4E1;
@@ -128,15 +137,14 @@ h1, .header_text
 	cursor: default;
 }
 
-.header_title
-{
-	float: none;
-	padding-bottom: 0.3vw;
-}
-
 .header_home
 {
-	font-style: italic;
+	float: none;
+	padding-bottom: 0.8vw;
+	font-family: 'FanfareJF', serif;
+	font-size: 2.2vw;
+	width: 14vw;
+	height: 2vw;
 }
 
 .header_home:hover, .header_link:hover
@@ -360,8 +368,10 @@ img.icon:active
 	.header_home
 	{
 		float: none;
-		width: 70vw;
+		width: 73vw;
 		margin-left: 8vw;
+		font-size: 11.2vw;
+		padding-left: 10vw;
 	}
 	
 	.header_home:hover, .header_home:active
@@ -391,7 +401,8 @@ img.icon:active
 		float: left;
 		padding: 0.1vw;
 		margin: 1vw;
-		margin-left: 3vw;
+		margin-left: -10vw;
+		margin-top: 2vw;
 	}
 	
 	.header_bars:hover, .header_bars:active
