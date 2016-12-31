@@ -1,6 +1,6 @@
-var FACEBOOK_LINK = "https://facebook.com/"
+var FACEBOOK_LINK = "https://www.facebook.com/hashtagtoothfairies/"
 var INSTAGRAM_LINK = "https://www.instagram.com/hashtagtoothfairies/"
-var YOUTUBE_MAIN_LINK = "https://youtube.com/"
+var YOUTUBE_MAIN_LINK = "https://www.youtube.com/channel/UCfD5inyBQB8r8LNasezjBaQ/"
 
 var current_episode = 1;
 var episode_max = 1;
