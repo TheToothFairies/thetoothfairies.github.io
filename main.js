@@ -12,7 +12,7 @@ function getEpisodeVideoID(episode)
 	switch (episode)
 	{
 		case 1:
-			return "1-fXO-H9oHs";
+			return "F8JUiO8hQuY";
 			
 		case 2:
 			return "RaXowL7SWW8";
@@ -36,7 +36,7 @@ function getEpisodeTitle(episode)
 	switch (episode)
 	{
 		case 1:
-			return "#ToothFairies Teaser";
+			return "The #ToothFairies - Episode 1 \"Mockumentary\"";
 			
 		case 2:
 			return "The Tooth Fairies: Episode 2";
