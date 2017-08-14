@@ -2,8 +2,11 @@ var FACEBOOK_LINK = "https://www.facebook.com/hashtagtoothfairies/"
 var INSTAGRAM_LINK = "https://www.instagram.com/hashtagtoothfairies/"
 var YOUTUBE_MAIN_LINK = "https://www.youtube.com/channel/UCfD5inyBQB8r8LNasezjBaQ/"
 
-var current_episode = 1;
-var episode_max = 1;
+var current_episode = 2;
+var episode_max = 7;
+
+var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+var isMobile = navigator.userAgent.toLowerCase().indexOf('mobile') > -1;
 
 function getEpisodeVideoID(episode)
 {
@@ -12,74 +15,37 @@ function getEpisodeVideoID(episode)
 	switch (episode)
 	{
 		case 1:
-			return "F8JUiO8hQuY";
+			return "1-fXO-H9oHs";
 			
 		case 2:
-			return "RaXowL7SWW8";
+			return "F8JUiO8hQuY";
 			
 		case 3:
-			return "WF34N4gJAKE";
+			return "GnhANufo5ec";
 			
 		case 4:
-			return "lCylb7E0EXY";
+			return "V64p6JJdMPI";
 			
 		case 5:
-			return "-U70dLy5des";
+			return "4v96xOkRKrk";
 			
 		case 6:
-			return "3lluAzdWeuE";
+			return "cguJnvE5DA4";
+			
+		case 7:
+			return "bkFPsCxovBA";
 	}
 }
 
 function getEpisodeTitle(episode)
 {
-	switch (episode)
-	{
-		case 1:
-			return "The #ToothFairies - Episode 1 \"Mockumentary\"";
-			
-		case 2:
-			return "The Tooth Fairies: Episode 2";
-			
-		case 3:
-			return "The Tooth Fairies: Episode 3";
-			
-		case 4:
-			return "The Tooth Fairies: Episode 4";
-			
-		case 5:
-			return "The Tooth Fairies: Episode 5";
-			
-		case 6:
-			return "The Tooth Fairies: Episode 6";
-	}
+	return "Unused."
 }
 
 function getEpisodeDesc(episode)
 {
-	switch (episode)
-	{
-		case 1:
-			return "";
-			
-		case 2:
-			return "This is an episode description. Full he none no side. Uncommonly surrounded considered for him are its. It we is read good soon. My to considered delightful invitation announcing of no decisively boisterous. Did add dashwoods deficient man concluded additions resources. Or landlord packages overcame distance smallest in recurred. Wrong maids or be asked no on enjoy. Household few sometimes out attending described. Lain just fact four of am meet high.";
-			
-		case 3:
-			return "This is an episode description. Sociable on as carriage my position weddings raillery consider. Peculiar trifling absolute and wandered vicinity property yet. The and collecting motionless difficulty son. His hearing staying ten colonel met. Sex drew six easy four dear cold deny. Moderate children at of outweigh it. Unsatiable it considered invitation he travelling insensible. Consulted admitting oh mr up as described acuteness propriety moonlight.";
-			
-		case 4:
-			return "This is an episode description. Do to be agreeable conveying oh assurance. Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate sell they west hard for the. Abode stuff noisy manor blush yet the far. Up colonel so between removed so do. Years use place decay sex worth drift age. Men lasting out end article express fortune demands own charmed. About are are money ask how seven.";
-			
-		case 5:
-			return "This is an episode description. Full he none no side. Uncommonly surrounded considered for him are its. It we is read good soon. My to considered delightful invitation announcing of no decisively boisterous. Did add dashwoods deficient man concluded additions resources. Or landlord packages overcame distance smallest in recurred. Wrong maids or be asked no on enjoy. Household few sometimes out attending described. Lain just fact four of am meet high.";
-			
-		case 6:
-			return "This is an episode description. Effects present letters inquiry no an removed or friends. Desire behind latter me though in. Supposing shameless am he engrossed up additions. My possible peculiar together to. Desire so better am cannot he up before points. Remember mistaken opinions it pleasure of debating. Court front maids forty if aware their at. Chicken use are pressed removed.";
-	}
+	return "Unused."
 }
-
-var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
 
 function loadPage(page)
 {
@@ -90,6 +56,11 @@ function loadPage(page)
 
 $( document ).ready(function()
 {	
+	if (isMobile)
+	{
+		$('head').append('<link rel="stylesheet" type="text/css" href="http://www.hashtagtoothfairies.com/stylesheet-mobile.css">');
+	}
+
 	//Remove episode slider if only one episode
 	if (episode_max == 1)
 	{
@@ -170,22 +141,22 @@ function switchEpisode(direction)
 			current_episode = 1;
 	}
 	
-	document.getElementById("episode_title").innerHTML = getEpisodeTitle(current_episode);
-	document.getElementById("episode_desc").innerHTML = getEpisodeDesc(current_episode);
+	//document.getElementById("episode_title").innerHTML = getEpisodeTitle(current_episode);
+	//document.getElementById("episode_desc").innerHTML = getEpisodeDesc(current_episode);
 	
 	if (isFirefox)
 	{
 		$(".main_video object").remove();
 		$(".youtube_player iframe").remove();
 		$('<iframe class="youtube_player" frameborder="0" allowfullscreen></iframe>')
-			.attr("src", "https://www.youtube.com/embed/" + getEpisodeVideoID(current_episode) + "?rel=0&amp;showinfo=0")
+			.attr("src", "https://www.youtube.com/embed/" + getEpisodeVideoID(current_episode) + "?rel=0&amp;showinfo=1")
 			.appendTo(".youtube_player");
 	}
 	else
 	{
 		$(".youtube_player embed").remove();
 		$('<embed class="youtube_player" width="100%" height="100%" wmode="window" allowfullscreen="true" type="application/x-shockwave-flash">')
-			.attr("src", "https://www.youtube.com/v/" + getEpisodeVideoID(current_episode) + "?rel=0&amp;showinfo=0&showsearch=0&fs=1&rel=0&autoplay=0&amp;ap=%2526fmt%3D18")
+			.attr("src", "https://www.youtube.com/v/" + getEpisodeVideoID(current_episode) + "?rel=0&amp;showinfo=1&showsearch=0&fs=1&rel=0&autoplay=0&amp;ap=%2526fmt%3D18")
 			.appendTo(".youtube_player");
 	}
 	
